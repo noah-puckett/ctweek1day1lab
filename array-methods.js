@@ -101,4 +101,16 @@ function reduceIt(array, callback) {
     return accumulator;
 }
 
-module.exports = { mapIt, filterIt, findIndex, every };
+
+//ALT reduce
+// reduceIt(arr, callback, initialValue) {
+//     let accumulator= initialValue;
+//     let i = 0;
+
+//     if(initialValue === undefined) {
+//         accumulator = array[0];
+//         i =1;
+//     }
+// }
+
+module.exports = { mapIt, filterIt, findIndex, every, reduceIt };

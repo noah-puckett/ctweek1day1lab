@@ -62,10 +62,25 @@ describe('array methods', () => {
             }
         }
 
-        const result = every(array, callback(4));
+        const result = every(array, callback);
 
-        const expected = 3;
+        const expected = false;
 
-        expect(result).toBe(expected);
+        expect(result).toEqual(expected);
     });
+
+    it('reduceIt sequentially adds every value in an array and returns the accumulated value of all items', () => {
+        const array = [2, 2, 4];
+
+        function callback(accumulator, item) {
+            return accumulator += item;
+        }
+
+        const result = reduceIt(array, callback);
+
+        const expected = 8;
+
+        expect(result).toEqual(expected);
+    });
+
 });
