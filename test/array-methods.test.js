@@ -1,4 +1,4 @@
-const mapIt = require('../array-methods');
+const { mapIt, filterIt, findIndex, every } = require('../array-methods');
 
 describe('array methods', () => {
 
@@ -17,5 +17,13 @@ describe('array methods', () => {
         expect(result).toEqual(expected);
 
     });
+
+    it('filters things if they are true I hope', () => {
+        const array = [1, 2, 3];
+
+        function itemFilter(item) {
+            item === item ? true : false;
+        }
+    })
 
 });
