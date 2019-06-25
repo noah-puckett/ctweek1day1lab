@@ -1,12 +1,3 @@
-//npm run test runs jest verbose
-
-
-// const array = [2, 4, 8];
-
-// function callback(item) {
-//   return item * 4;
-// }
-
 function mapIt(array, callback) {
     const newArray = [];
 
@@ -15,14 +6,6 @@ function mapIt(array, callback) {
     }
     return newArray;
 }
-
-// const array = ['thing', 'stuff', 'more items', 'thing'];
-
-// function callback(filter) {
-//     if(filter) {
-//         return filter;
-//     }
-// }
 
 function filterIt(array, callback) {
     const newArray = [];
@@ -35,12 +18,6 @@ function filterIt(array, callback) {
     return newArray;
 }
 
-// function callback(item) {
-//     if(item) {
-//         return item;
-//     }
-// }
-
 function findIndex(array, callback) {
     for(let i = 0; i < array.length; i++) {
         if(callback === array[i]) {
@@ -49,23 +26,6 @@ function findIndex(array, callback) {
     }
     return -1;
 }
-
-// function callback(item) {
-//     if(item) {
-//         return item;
-//     }
-// }
-
-// function callback(item) {
-//     if(item) {
-//       return true;
-//     }
-//     else {
-//       return false;
-//     }
-// }
-
-// const array = [true,  true];
 
 function callback(item) {
     if(item) {
@@ -86,13 +46,6 @@ function every(array, callback) {
     return true;
 }
 
-
-// function callback(accumulator, item) {
-//     return accumulator += item;
-//   }
-  
-//   const array = [2, 4];
-  
 function reduceIt(array, callback) {
     let accumulator = 0;
     for(let i = 0; i < array.length; i++) {
@@ -100,17 +53,5 @@ function reduceIt(array, callback) {
     }
     return accumulator;
 }
-
-
-//ALT reduce
-// reduceIt(arr, callback, initialValue) {
-//     let accumulator= initialValue;
-//     let i = 0;
-
-//     if(initialValue === undefined) {
-//         accumulator = array[0];
-//         i =1;
-//     }
-// }
 
 module.exports = { mapIt, filterIt, findIndex, every, reduceIt };
