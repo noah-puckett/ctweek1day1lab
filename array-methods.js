@@ -47,6 +47,7 @@ function findIndex(array, callback) {
             return i;
         }
     }
+    return -1;
 }
 
 // function callback(item) {
@@ -83,6 +84,21 @@ function every(array, callback) {
         }
     }
     return true;
+}
+
+
+// function callback(accumulator, item) {
+//     return accumulator += item;
+//   }
+  
+//   const array = [2, 4];
+  
+function reduceIt(array, callback) {
+    let accumulator = 0;
+    for(let i = 0; i < array.length; i++) {
+        accumulator = callback(accumulator, array[i]); 
+    }
+    return accumulator;
 }
 
 module.exports = { mapIt, filterIt, findIndex, every };
