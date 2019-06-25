@@ -27,15 +27,6 @@ function findIndex(array, callback) {
     return -1;
 }
 
-function callback(item) {
-    if(item) {
-        return true;
-    }
-    else {
-        return false;
-    }
-}
-
 function every(array, callback) {
 
     for(let i = 0; i < array.length; i++) {
